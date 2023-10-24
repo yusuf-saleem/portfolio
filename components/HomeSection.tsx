@@ -53,7 +53,6 @@ const HomeSection = () => {
       <div className="flex flex-row items-center text-center justify-center">
         <Link
           to="about"
-          activeClass="active"
           spy={true}
           smooth={true}
           offset={-100}
