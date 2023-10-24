@@ -4,19 +4,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
 
-const theme = {
-    colors: {
-        primary: "#FF5733",
-        secondary: "#0088CC",
-        background: "#F0F0F0",
-        text: "#333",
-    },
-    typography: {
-        fontFamily: "Arial, sans-serif",
-        fontSize: "16px",
-    },
-};
-
 export default function RootLayout({
     children,
 }: {
@@ -29,7 +16,6 @@ export default function RootLayout({
                 <ThemeProvider
                     enableSystem={true}
                     attribute="class"
-                    theme={theme}
                 >
                     <Navbar />
                     {children}
