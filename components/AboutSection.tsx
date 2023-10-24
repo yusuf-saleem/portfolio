@@ -59,7 +59,7 @@ const AboutSection = () => {
                             </span>{" "}
                             I continually seek ways to push my technical 
                             boundaries while also fostering my creative expression.
-                            I'm enthusiastic about my career path ahead and am
+                            I&apos;m enthusiastic about my career path ahead and am
                             always open to new opportunities.🙂
                         </p>
                     </div>
