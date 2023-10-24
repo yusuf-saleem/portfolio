@@ -57,13 +57,15 @@ const WorkSection = () => {
                             <SlideUp offset="-300px 0px -300px 0px">
                                 <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12 text-center items-center justify-end">
                                     <div>
-                                        <Image
-                                            src={work.image}
-                                            alt=""
-                                            width={160}
-                                            height={160}
-                                            className="rounded-xl shadow-xl hover:opacity-70"
-                                        />
+                                        <Link href={work.link}>
+                                            <Image
+                                                src={work.image}
+                                                alt=""
+                                                width={160}
+                                                height={160}
+                                                className="rounded-xl shadow-xl hover:opacity-70"
+                                            />
+                                        </Link>
                                     </div>
                                     <div className="mt-8 md:w-1/2 text-center md:text-left">
                                         <h1 className="text-4xl font-bold mb-6">
@@ -91,7 +93,8 @@ const WorkSection = () => {
                     );
                 })}
             </div>
-            <div className="mt-32 mb-32"></div>
+            <div className="mt-32 mb-32">
+            </div>
         </section>
     );
 };
