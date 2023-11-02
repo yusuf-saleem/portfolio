@@ -1,14 +1,16 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import { LanguageProvider, useLanguage } from "@/context/LanguageProvider";
 
 const projects = [
     {
         name: "Tensai",
         description:
-            "An AI infused language learning app for guaging users' language comprehension ability.",
+            "An AI infused language learning app for gauging users' language comprehension ability.",
         image: "/tensai.png",
         skills: [
             { skill: "React" },
@@ -21,10 +23,28 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+    const { lang, setLang } = useLanguage();
+    const localization = require(`../locales/${lang}/projects.json`);
+
+    const projects = [
+        {
+            name: localization.tensai,
+            description:
+                localization.tensai_desc,
+            image: "/tensai.png",
+            skills: [
+                { skill: "React" },
+                { skill: "Kubernetes" },
+                { skill: "Python" },
+            ],
+            github: "https://github.com/yusuf-saleem/tensai",
+            link: "https://tensai.netlify.app/",
+        },
+    ];
     return (
         <section id="projects">
             <h1 className="my-10 text-center font-bold text-4xl">
-                Projects
+                {localization.projects}
                 <hr className="w-6 h-1 mx-auto my-4 bg-sky-500 border-0 rounded"></hr>
             </h1>
 

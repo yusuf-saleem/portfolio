@@ -1,10 +1,14 @@
-"use client"; // this is a client component
+"use client";
 import React from "react";
 import Image from "next/image";
 import { Link } from "react-scroll/modules";
 import { HiArrowDown } from "react-icons/hi";
+import { LanguageProvider, useLanguage } from "@/context/LanguageProvider";
 
 const HomeSection = () => {
+    const { lang, setLang } = useLanguage();
+    const localization = require(`../locales/${lang}/home.json`);
+
     return (
         <section id="home">
             <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:py-48 md:flex-row md:space-x-4 md:text-left">
@@ -19,18 +23,17 @@ const HomeSection = () => {
                 </div>
                 <div className="md:mt-2 md:w-3/5">
                     <h1 className="text-4xl font-bold mt-6 md:mt-0 md:text-7xl">
-                        Hi, I&#39;m Yusuf!
+                        {localization.greeting}
                     </h1>
                     <p className="text-lg mt-4 mb-6 md:text-2xl">
-                        I&#39;m a{" "}
+                        {localization.intro1}
                         <span className="font-semibold text-sky-600">
-                            Software Engineer{" "}
+                            {localization.intro2}
                         </span>
-                        based in Vancouver, Canada. I enjoy building tools to
-                        empower others.
+                        {localization.intro3}
                     </p>
                     <Link
-                        to="work"
+                        to="career"
                         className="text-neutral-100 font-semibold px-6 py-3 bg-sky-600 rounded shadow hover:bg-sky-700 mr-4"
                         activeClass="active"
                         spy={true}
@@ -38,7 +41,7 @@ const HomeSection = () => {
                         offset={-100}
                         duration={500}
                     >
-                        Work
+                        {localization.career}
                     </Link>
                     <Link
                         to="projects"
@@ -49,7 +52,7 @@ const HomeSection = () => {
                         offset={-100}
                         duration={500}
                     >
-                        Projects
+                        {localization.projects}
                     </Link>
                 </div>
             </div>

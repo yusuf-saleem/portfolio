@@ -1,4 +1,4 @@
-"use client"; // this is a client component
+"use client";
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-scroll/modules";
@@ -6,36 +6,40 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { LanguageProvider, useLanguage } from "@/context/LanguageProvider";
 
 interface NavItem {
     label: string;
     page: string;
 }
 
-const NAV_ITEMS: Array<NavItem> = [
-    {
-        label: "Home",
-        page: "home",
-    },
-    {
-        label: "About",
-        page: "about",
-    },
-    {
-        label: "Work",
-        page: "work",
-    },
-    {
-        label: "Projects",
-        page: "projects",
-    },
-];
-
 export default function Navbar() {
     const { systemTheme, theme, setTheme } = useTheme();
     const currentTheme = theme === "system" ? systemTheme : theme;
     const pathname = usePathname();
     const [navbar, setNavbar] = useState(false);
+    const { lang, setLang } = useLanguage();
+    const localization = require(`../locales/${lang}/navbar.json`);
+
+    const NAV_ITEMS: Array<NavItem> = [
+        {
+            label: localization.home,
+            page: "home",
+        },
+        {
+            label: localization.about,
+            page: "about",
+        },
+        {
+            label: localization.career,
+            page: "career",
+        },
+        {
+            label: localization.projects,
+            page: "projects",
+        },
+    ];
+
     return (
         <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
             <div className="justify-between md:items-center md:flex">
@@ -88,21 +92,38 @@ export default function Navbar() {
                                     </Link>
                                 );
                             })}
-                            {currentTheme === "dark" ? (
-                                <button
-                                    onClick={() => setTheme("light")}
-                                    className="bg-slate-100 p-2 rounded-xl"
-                                >
-                                    <RiSunLine size={25} color="black" />
-                                </button>
-                            ) : (
-                                <button
-                                    onClick={() => setTheme("dark")}
-                                    className="bg-slate-100 p-2 rounded-xl"
-                                >
-                                    <RiMoonFill size={25} />
-                                </button>
-                            )}
+                            <div className="flex items-end">
+                                {currentTheme === "dark" ? (
+                                    <button
+                                        onClick={() => setTheme("light")}
+                                        className="bg-slate-100 p-2 rounded-xl w-12 h-12 overflow-hidden whitespace-nowrap mr-2 flex flex items-center justify-center"
+                                    >
+                                        <RiSunLine size={28} color="black" />
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={() => setTheme("dark")}
+                                        className="bg-slate-100 p-2 rounded-xl w-12 h-12 overflow-hidden whitespace-nowrap mr-2 flex flex items-center justify-center"
+                                    >
+                                        <RiMoonFill size={28} />
+                                    </button>
+                                )}
+                                {lang === "en" ? (
+                                    <button
+                                        onClick={() => setLang("jp")}
+                                        className="bg-transparent border-2 border-slate-100 p-2 rounded-xl w-12 h-12 overflow-hidden whitespace-nowrap"
+                                    >
+                                        <p className="text-4">EN</p>
+                                    </button>
+                                ) : (
+                                    <button
+                                        onClick={() => setLang("en")}
+                                        className="bg-transparent border-2 border-slate-100 p-2 rounded-xl w-12 h-12 overflow-hidden whitespace-nowrap"
+                                    >
+                                        <p className="text-112">JP</p>
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
