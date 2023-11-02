@@ -13,9 +13,9 @@ const projects = [
             "An AI infused language learning app for gauging users' language comprehension ability.",
         image: "/tensai.png",
         skills: [
-            { skill: "React" },
-            { skill: "Kubernetes" },
-            { skill: "Python" },
+            { skill: "React.js" },
+            { skill: "Node.js" },
+            { skill: "Supabase" },
         ],
         github: "https://github.com/yusuf-saleem/tensai",
         link: "https://tensai.netlify.app/",
