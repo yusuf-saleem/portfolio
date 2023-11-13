@@ -34,8 +34,9 @@ const ProjectsSection = () => {
             image: "/tensai.png",
             skills: [
                 { skill: "React" },
-                { skill: "Kubernetes" },
-                { skill: "Python" },
+                { skill: "Node.js" },
+                { skill: "OpenAI" },
+                { skill: "Supabase" },
             ],
             github: "https://github.com/yusuf-saleem/tensai",
             link: "https://tensai.netlify.app/",
