@@ -48,7 +48,7 @@ const CareerSection = () => {
             role: localization.software_qa_engineer_coop,
             image: "/tantalus-systems.jpg",
             link: "https://www.tantalus.com/",
-            skills: [{ skill: "C" }, { skill: "Bash" }],
+            skills: [{ skill: "Python" }, { skill: "Bash" }],
         },
     ];
 
