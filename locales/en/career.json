@@ -1,7 +1,7 @@
 {
     "my_career": "My Career",
     "software_developer": "Software Developer",
-    "firmware_engineer_coop": "Firmware Engineer Co-Op",
-    "software_engineer_coop": "Software Engineer Co-Op",
-    "software_qa_engineer_coop": "Software Verification Engineer Co-Op"
+    "firmware_engineer_coop": "Embedded Software Engineer",
+    "software_engineer_coop": "Software Engineer",
+    "software_qa_engineer_coop": "Software Verification Engineer"
 }
