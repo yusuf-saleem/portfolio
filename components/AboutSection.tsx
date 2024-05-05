@@ -4,10 +4,9 @@ import Image from "next/image";
 import { LanguageProvider, useLanguage } from "@/context/LanguageProvider";
 
 const skills = [
-    { skill: "JavaScript" },
-    { skill: "React" },
-    { skill: "Node.js" },
     { skill: "Python" },
+    { skill: "React.js" },
+    { skill: "Node.js" },
     { skill: "C" },
     { skill: "Kubernetes" },
     { skill: "Docker" },

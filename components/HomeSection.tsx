@@ -44,6 +44,17 @@ const HomeSection = () => {
                         {localization.career}
                     </Link>
                     <Link
+                        to="certifications"
+                        className="text-neutral-100 font-semibold px-6 py-3 bg-sky-600 rounded shadow hover:bg-sky-700 mr-4"
+                        activeClass="active"
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                    >
+                        {localization.certifications}
+                    </Link>
+                    <Link
                         to="projects"
                         className="text-neutral-100 font-semibold px-6 py-3 bg-sky-600 rounded shadow hover:bg-sky-700"
                         activeClass="active"
