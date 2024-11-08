@@ -9,9 +9,18 @@ const CareerSection = () => {
     const { lang, setLang } = useLanguage();
     const localization = require(`../locales/${lang}/career.json`);
 
-    const projects = [
+    const companies = [
+        {
+            name: "Dialpad",
+            date: `${localization.jan} 2024 ~ ${localization.present}`,
+            role: localization.software_engineer,
+            image: "/dialpad.png",
+            link: "https://www.dialpad.com/",
+            skills: [{ skill: "Python" }, { skill: "Vue" }, { skill: "GCP" }],
+        },
         {
             name: "Fortinet",
+            date: `${localization.oct} 2022 ~ ${localization.nov} 2024`,
             role: localization.software_developer,
             image: "/fortinet.jpg",
             link: "https://www.fortinet.com/",
@@ -23,6 +32,7 @@ const CareerSection = () => {
         },
         {
             name: "Sierra Wireless",
+            date: `${localization.jan} 2022 ~ ${localization.aug} 2022`,
             role: localization.firmware_engineer_coop,
             image: "/sierra-wireless.jpg",
             link: "https://www.sierrawireless.com/",
@@ -34,6 +44,7 @@ const CareerSection = () => {
         },
         {
             name: "Sierra Wireless",
+            date: `${localization.jan} 2021 ~ ${localization.aug} 2021`,
             role: localization.software_engineer_coop,
             image: "/sierra-wireless.jpg",
             link: "https://www.sierrawireless.com/",
@@ -45,6 +56,7 @@ const CareerSection = () => {
         },
         {
             name: "Tantalus Systems",
+            date: `${localization.apr} 2019 ~ ${localization.dec} 2019`,
             role: localization.software_qa_engineer_coop,
             image: "/tantalus-systems.jpg",
             link: "https://www.tantalus.com/",
@@ -60,7 +72,7 @@ const CareerSection = () => {
             </h1>
 
             <div className="flex flex-col space-y-28">
-                {projects.map((job, idx) => {
+                {companies.map((job, idx) => {
                     return (
                         <div key={idx}>
                             <SlideUp offset="-300px 0px -300px 0px">
@@ -81,6 +93,9 @@ const CareerSection = () => {
                                             {job.name}
                                         </h1>
                                         <p className="text-xl leading-7 mb-4 text-neutral-600  dark:text-neutral-400 ">
+                                            {job.date}
+                                        </p>
+                                        <p className="text-xl leading-7 mb-4 text-neutral-600 font-bold dark:text-neutral-400 ">
                                             {job.role}
                                         </p>
                                         <div className="flex flex-row justify-center md:justify-start items-center space-x-4">

@@ -9,8 +9,7 @@ const skills = [
     { skill: "Node.js" },
     { skill: "C" },
     { skill: "Kubernetes" },
-    { skill: "Docker" },
-    { skill: "Git" },
+    { skill: "Docker" }
 ];
 
 const AboutSection = () => {
