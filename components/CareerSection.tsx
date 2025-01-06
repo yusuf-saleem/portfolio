@@ -12,11 +12,11 @@ const CareerSection = () => {
     const companies = [
         {
             name: "Dialpad",
-            date: `${localization.jan} 2024 ~ ${localization.present}`,
+            date: `${localization.nov} 2024 ~ ${localization.present}`,
             role: localization.software_engineer,
             image: "/dialpad.png",
             link: "https://www.dialpad.com/",
-            skills: [{ skill: "Python" }, { skill: "Vue" }, { skill: "GCP" }],
+            skills: [{ skill: "Python" }, { skill: "GCP" }],
         },
         {
             name: "Fortinet",
