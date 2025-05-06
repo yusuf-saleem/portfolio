@@ -54,7 +54,7 @@ const HomeSection = () => {
                     >
                         {localization.certifications}
                     </Link>
-                    <Link
+{/*                     <Link
                         to="projects"
                         className="text-neutral-100 font-semibold px-6 py-3 bg-sky-600 rounded shadow hover:bg-sky-700"
                         activeClass="active"
@@ -64,7 +64,7 @@ const HomeSection = () => {
                         duration={500}
                     >
                         {localization.projects}
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
             <div className="flex flex-row items-center text-center justify-center">
