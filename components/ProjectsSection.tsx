@@ -6,21 +6,22 @@ import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import { LanguageProvider, useLanguage } from "@/context/LanguageProvider";
 
-const projects = [
-    {
-        name: "Tensai",
-        description:
-            "An AI infused language learning app for gauging users' language comprehension ability.",
-        image: "/tensai.png",
-        skills: [
-            { skill: "React.js" },
-            { skill: "Node.js" },
-            { skill: "Supabase" },
-        ],
-        github: "https://github.com/yusuf-saleem/tensai",
-        link: "https://tensai.netlify.app/",
-    },
-];
+// const projects = [
+//     {
+//         name: "Tensai",
+//         description:
+//             "An AI infused language learning app for gauging users' language comprehension ability.",
+//         image: "/tensai.png",
+//         skills: [
+//             { skill: "React.js" },
+//             { skill: "Node.js" },
+//             { skill: "Supabase" },
+//         ],
+//         github: "https://github.com/yusuf-saleem/tensai",
+//         link: "https://tensai.netlify.app/",
+//     },
+// ];
+const projects = []
 
 const ProjectsSection = () => {
     const { lang, setLang } = useLanguage();
