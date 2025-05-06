@@ -6,44 +6,42 @@ import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import { LanguageProvider, useLanguage } from "@/context/LanguageProvider";
 
-// const projects = [
-//     {
-//         name: "Tensai",
-//         description:
-//             "An AI infused language learning app for gauging users' language comprehension ability.",
-//         image: "/tensai.png",
-//         skills: [
-//             { skill: "React.js" },
-//             { skill: "Node.js" },
-//             { skill: "Supabase" },
-//         ],
-//         github: "https://github.com/yusuf-saleem/tensai",
-//         link: "https://tensai.netlify.app/",
-//     },
-// ];
-const projects = []
+const projects = [
+    {
+        name: "Tensai",
+        description:
+            "An AI infused language learning app for gauging users' language comprehension ability.",
+        image: "/tensai.png",
+        skills: [
+            { skill: "React.js" },
+            { skill: "Node.js" },
+            { skill: "Supabase" },
+        ],
+        github: "https://github.com/yusuf-saleem/tensai",
+        link: "https://tensai.netlify.app/",
+    },
+];
 
 const ProjectsSection = () => {
     const { lang, setLang } = useLanguage();
     const localization = require(`../locales/${lang}/projects.json`);
 
-    // const projects = [
-    //     {
-    //         name: localization.tensai,
-    //         description:
-    //             localization.tensai_desc,
-    //         image: "/tensai.png",
-    //         skills: [
-    //             { skill: "React" },
-    //             { skill: "Node.js" },
-    //             { skill: "OpenAI" },
-    //             { skill: "Supabase" },
-    //         ],
-    //         github: "https://github.com/yusuf-saleem/tensai",
-    //         link: "https://tensai.netlify.app/",
-    //     },
-    // ];
-    const projects: any[] = [];
+    const projects = [
+        {
+            name: localization.tensai,
+            description:
+                localization.tensai_desc,
+            image: "/tensai.png",
+            skills: [
+                { skill: "React" },
+                { skill: "Node.js" },
+                { skill: "OpenAI" },
+                { skill: "Supabase" },
+            ],
+            github: "https://github.com/yusuf-saleem/tensai",
+            link: "https://tensai.netlify.app/",
+        },
+    ];
 
     return (
         <section id="projects">
