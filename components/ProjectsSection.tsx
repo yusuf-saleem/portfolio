@@ -27,22 +27,23 @@ const ProjectsSection = () => {
     const { lang, setLang } = useLanguage();
     const localization = require(`../locales/${lang}/projects.json`);
 
-    const projects = [
-        {
-            name: localization.tensai,
-            description:
-                localization.tensai_desc,
-            image: "/tensai.png",
-            skills: [
-                { skill: "React" },
-                { skill: "Node.js" },
-                { skill: "OpenAI" },
-                { skill: "Supabase" },
-            ],
-            github: "https://github.com/yusuf-saleem/tensai",
-            link: "https://tensai.netlify.app/",
-        },
-    ];
+    // const projects = [
+    //     {
+    //         name: localization.tensai,
+    //         description:
+    //             localization.tensai_desc,
+    //         image: "/tensai.png",
+    //         skills: [
+    //             { skill: "React" },
+    //             { skill: "Node.js" },
+    //             { skill: "OpenAI" },
+    //             { skill: "Supabase" },
+    //         ],
+    //         github: "https://github.com/yusuf-saleem/tensai",
+    //         link: "https://tensai.netlify.app/",
+    //     },
+    // ];
+    const projects = []
     return (
         <section id="projects">
             <h1 className="my-10 text-center font-bold text-4xl">
