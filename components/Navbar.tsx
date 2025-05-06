@@ -34,10 +34,10 @@ export default function Navbar() {
             label: localization.career,
             page: "career",
         },
-        {
-            label: localization.projects,
-            page: "projects",
-        },
+        // {
+        //     label: localization.projects,
+        //     page: "projects",
+        // },
     ];
 
     return (
