@@ -43,7 +43,8 @@ const ProjectsSection = () => {
     //         link: "https://tensai.netlify.app/",
     //     },
     // ];
-    const projects = []
+    const projects: any[] = [];
+
     return (
         <section id="projects">
             <h1 className="my-10 text-center font-bold text-4xl">
